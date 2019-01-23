@@ -1,8 +1,10 @@
 <div class="form-group"
-    [class.has-success]="input.valid && (input.dirty || input.touched)"
-    [class.has-error]="!input.valid && (input.dirty || input.touched)">
+    [class.has-success]="hasSuccess()"
+    [class.has-error]="hasError()">
   <label class="control-label sr-only" for="inputSuccess"><i class="fa fa-check"></i> {{label}}</label>
-  <input type="text" class="form-control" name="adress" minlength="5" #iptAdress="ngModel" required ngModel placeholder="Endereço" autocomplete="off">
-  <span class="help-block" *ngIf="input.valid && (input.dirty || input.touched)"><i class="fa fa-check"></i> Ok</span>
-  <span class="help-block" *ngIf="!input.valid && (input.dirty || input.touched)"><i class="fa fa-remove"></i> {{errorMessage}}</span>
+
+<ng-content></ng-content>
+
+  <span class="help-block" *ngIf="hasSuccess()"><i class="fa fa-check"></i> Ok</span>
+  <span class="help-block" *ngIf="hasError()"><i class="fa fa-remove"></i> {{errorMessage}}</span>
 </div>

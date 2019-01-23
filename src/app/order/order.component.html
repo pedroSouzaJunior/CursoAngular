@@ -20,23 +20,18 @@
             </div>
             <div class="col-sm-6 col-xs-12">
               <mt-input-container errorMessage="Campo Obrigatório e com 5 caracteres" label="Endereço">
-                <input class="form-control" name="address" ngModel required minlength="5" autocomplete="off">
+                <input class="form-control" name="address" ngModel required placeholder="Endereço" minlength="4" autocomplete="off">
               </mt-input-container>
             </div>
             <div class="col-sm-2 col-xs-6">
-              <div class="form-group has-success">
-                <label class="control-label sr-only" for="inputSuccess"><i class="fa fa-check"></i> Número</label>
-                <input type="text" class="form-control" name="number" required ngModel placeholder="Número" autocomplete="off">
-                <span class="help-block"><i class="fa fa-check"></i> Ok</span>
-              </div>
+                <mt-input-container errorMessage="Campo Obrigatório" label="Número">
+                    <input type="text" class="form-control" name="number" ngModel required placeholder="Número" autocomplete="off">
+                  </mt-input-container>
             </div>
             <div class="col-sm-4 col-xs-6">
-              <div class="form-group has-error">
-                <label class="control-label sr-only" for="inputSuccess"><i class="fa fa-check"></i> Complemento</label>
-                <input type="text" class="form-control" name="optional" ngModel placeholder="Complemento">
-                <span class="help-block"><i class="fa fa-remove"></i> Help block with error</span>
-              </div>
-
+                <mt-input-container errorMessage="Campo Obrigatório" label="Número">
+                    <input type="text" class="form-control" name="optional" ngModel placeholder="Complemento">
+                  </mt-input-container>
             </div>
             <!-- /.col -->
           </div>
